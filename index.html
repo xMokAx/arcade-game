@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Effective JavaScript: Frogger</title>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <script>
+        if (document.documentElement.clientWidth < 768) {
+            // decrease the menu font sizes if the device screen is less than 768
+            document.styleSheets[1].insertRule('.menu-item {font-size: 80px;}', 12);
+            document.styleSheets[1].insertRule('h1 {font-size: 128px;}', 13);
+            document.styleSheets[1].insertRule('.help {font-size: 32px;}', 14);
+            // decrease the scale to 0.5 if the device screen is less than 768
+            document.querySelector("meta[name=viewport]")
+                .setAttribute('content', 'width=device-width, initial-scale=0.5, user-scalable=0');
+        };
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="avatar-list hidden">
+            <img class="avatar-img" src="images/char-boy.png" alt="boy avatar" width="67.33" height="114">
+            <img class="avatar-img" src="images/char-cat-girl.png" alt="cat girl avatar" width="67.33" height="114">
+            <img class="avatar-img" src="images/char-horn-girl.png" alt="horn girl avatar" width="67.33" height="114">
+            <img class="avatar-img" src="images/char-pink-girl.png" alt="pink girl avatar" width="67.33" height="114">
+            <img class="avatar-img" src="images/char-princess-girl.png" alt="princess girl avatar" width="67.33" height="114">
+        </div>
+        <div class="menu">
+            <h1>Arcade</h1>
+            <ul>
+                <li class="menu-item">Start Game</li>
+                <li class="menu-item">Help</li>
+                <li class="menu-item"></li>
+            </ul>
+            <p class="help hidden">This is a clone of the classic arcade game frogger. How To Play:
+                <br> 1- Use the arrow keys to move or the controller if you are playing on a smartphone or a tablet.
+                <br> 2- To win you need to reach the water.
+                <br> 3- Avoid the enemies(bugs).
+                <br> 4- Collect gems to increase your score.
+                <br> 5- The rock is impassable.
+                <br> 6- The game has 2 levels. once you finish the first one, the second starts immediately.
+                <br> 7- You can change your player avatar from the list on the left.
+            </p>
+        </div>
+        <div class="controller hidden">
+            <button id="up" class="controller-btn"></button>
+            <button id="right" class="controller-btn"></button>
+            <button id="down" class="controller-btn"></button>
+            <button id="left" class="controller-btn"></button>
+        </div>
+    </div>
+
+    <script src="js/resources.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/engine.js"></script>
+</body>
+
+</html>
