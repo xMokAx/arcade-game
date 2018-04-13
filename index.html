@@ -9,10 +9,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
     <script>
         if (document.documentElement.clientWidth < 768) {
-            // decrease the menu font sizes if the device screen is less than 768
-            document.styleSheets[1].insertRule('.menu-item {font-size: 80px;}', 12);
-            document.styleSheets[1].insertRule('h1 {font-size: 128px;}', 13);
-            document.styleSheets[1].insertRule('.help {font-size: 32px;}', 14);
             // decrease the scale to 0.5 if the device screen is less than 768
             document.querySelector("meta[name=viewport]")
                 .setAttribute('content', 'width=device-width, initial-scale=0.5, user-scalable=0');
@@ -36,15 +32,18 @@
                 <li class="menu-item">Help</li>
                 <li class="menu-item"></li>
             </ul>
-            <p class="help hidden">This is a clone of the classic arcade game frogger. How To Play:
-                <br> 1- Use the arrow keys to move or the controller if you are playing on a smartphone or a tablet.
-                <br> 2- To win you need to reach the water.
-                <br> 3- Avoid the enemies(bugs).
-                <br> 4- Collect gems to increase your score.
-                <br> 5- The rock is impassable.
-                <br> 6- The game has 2 levels. once you finish the first one, the second starts immediately.
-                <br> 7- You can change your player avatar from the list on the left.
-            </p>
+            <div class="help hidden">
+                <p>This is a clone of the classic arcade game frogger. How To Play:</p>
+                <ol>
+                    <li>Use the arrow keys to move or the controller if you are playing on a smartphone or a tablet.</li>
+                    <li>To win you need to reach the water.</li>
+                    <li>Avoid the enemies(bugs).</li>
+                    <li>Collect gems to increase your score.</li>
+                    <li>The rock is impassable.</li>
+                    <li>The game has 2 levels. once you finish the first one, the second starts immediately.</li>
+                    <li>You can change your player avatar from the list on the left.</li>
+                </ol>
+            </div>
         </div>
         <div class="controller hidden">
             <button id="up" class="controller-btn"></button>

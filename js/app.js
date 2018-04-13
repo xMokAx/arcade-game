@@ -14,7 +14,7 @@ class Enemy {
         // The image/sprite for our enemies, this uses
         // a helper we've provided to easily load images
         this.sprite = 'images/enemy-bug.png';
-        this.hitBox = [50, 50];
+        this.hitBox = [75, 80];
     }
     // Update the enemy's position, required method for game
     // Parameter: dt, a time delta between ticks
@@ -40,7 +40,7 @@ class Player {
     constructor(x, y, sprite) {
         this.loc = [x, y];
         this.sprite = sprite;
-        this.hitBox = [50, 50];
+        this.hitBox = [75, 80];
     }
 
     update(dt) {
@@ -100,7 +100,7 @@ class Gem {
     constructor(x, y, sprite) {
         this.loc = [x, y];
         this.sprite = sprite;
-        this.hitBox = [50, 50];
+        this.hitBox = [75, 60];
     }
     render() {
         ctx.drawImage(Resources.get(this.sprite), this.loc[0], this.loc[1]);
@@ -111,7 +111,7 @@ class Rock {
     constructor(x, y) {
         this.loc = [x, y];
         this.sprite = 'images/rock.png';
-        this.hitBox = [50, 50];
+        this.hitBox = [75, 80];
     }
     render() {
         ctx.drawImage(Resources.get(this.sprite), this.loc[0], this.loc[1]);

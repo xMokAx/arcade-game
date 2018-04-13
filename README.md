@@ -2,7 +2,7 @@
 This is a clone of the classic arcade game frogger.
 
 This project is part of the Udacity Front End Nanodegree.
-* **Try it now:** https://xmokax.github.io/arcade-game/
+* **[Try it now](https://xmokax.github.io/arcade-game/)**
 ## Table of Contents
 
 * [How It Works](#how-it-works)

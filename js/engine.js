@@ -190,7 +190,8 @@ var Engine = (function (global) {
                 canvas.classList.remove('hidden');
                 avatarList.classList.remove('hidden');
                 main();
-                if (document.documentElement.clientWidth <= 1024) {
+                // check the user agent type to know if it's a smartphone or a tablet
+                if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
                     controller.classList.remove('hidden');
                 }
             } else if (e.target.textContent === 'Help') {
